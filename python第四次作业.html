@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+</style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>欢迎来到我的 Python 学习主页</h1>
+    </div>
+</header>
+<div class="container">
+    <p>姓名：阿布都卡依尔·阿布力米提 学号：3190106276 组号：第六组</p>
+</div>
+<nav>
+    <div class="container">
+        <a href="#python_content">主要内容</a>
+        <a href="#python_links"> 有用链接</a>
+        <a href="#python_common_mistakes">易错题</a>
+        <a href="#python_builtins">常用基础语法</a>
+    </div>
+</nav>
+<div class="container content">
+    <section id="python_content">
+        <h2>主要内容</h2>
+        <p>Python 是一种广泛使用的高级编程语言，它强调代码的可读性和简洁性，使程序员能够用更少的代码行数表达想法。是由荷兰国家数学与计算机科学研究中心的吉多·范罗苏姆于1990年代初设计，作为一门叫做ABC语言的替代品。 Python提供了高效的高级数据结构，还能简单有效地面向对象编程。Python语法和动态类型，以及解释型语言的本质，使它成为多数平台上写脚本和快速开发应用的编程语言， 随着版本的不断更新和语言新功能的添加，逐渐被用于独立的、大型项目的开发。</p>
+    </section>
+    <section id="python_links">
+        <h2>有用链接</h2>
+        <ul>
+            <li><a href="https://www.python.org">Python 官网</a></li>
+            <li><a href="https://docs.python.org">Python 文档</a></li>
+            <li><a href="https://realpython.com">Real Python</a></li>
+            <li><a href="https://kimi.moonshot.cn/">KimiAI助手</a></li>
+        </ul>
+    </section>
+    <section id="python_common_mistakes">
+        <h2>易错题</h2>
+        <!-- 以下是易错题的分类和示例 -->
+        
+        <ul>
+            <li>语句sorted([1, 2, 3], reverse=True) == reversed([1, 2, 3])执行结果为______。
+
+                正确答案： False
+                
+                            sorted() 函数对所有可迭代的对象进行排序操作，sorted(iterable, reverse=False) 即进行降序排列，返回的是降序排列后的原类型对象；reversed 函数返回一个反转的迭代器，即任意的可迭代类型，需用list()函数转换为列表对象</li>
+            <li>sorted([111, 2, 33], key=lambda x: len(str(x)))的执行结果为______。
+
+                正确答案： [2,33,111]
+                
+                            sorted函数原型：sorted(iterable, key=None, reverse=False) ，key = 元素用来进行比较的参数；
+                            lambda x: len(str(x)) 是python中的匿名函数，x是参数，返回值是len(str(x))，即元素转换为字符串后的长度
+                            函数总体的意义为：以元素转换为字符串后的长度来以小到大的升序输出</li>
+            <li>已知列表 x = [1, 2]，那么表达式 list(enumerate(x)) 的值为______。
+
+                正确答案： [(0,1),(1,2)]
+                
+                            enumerate() 函数将一个可遍历的数据对象(如列表、元组或字符串)，组合为一个索引序列：元素下标和数据，原型为：enumerate(sequence, [start=0])，默认从0开始。一般用在 for 循环当中</li>
+        </ul>
+        <h2>易错点</h2>
+        <ul>
+            <li>python中类型不同，不能相加拼接，不同类型进行比较，如果其中一个是数字（ int /float /long /complex 等），则数字型<其它非数字型；如果两个都是非数字型，则：
+                       tuple () > str > list [ ] > dict {} > number</li>
+            <li>[ start : end : step ] 是切片的语法形式，start 和 end 是开始和结束的元素下标，前取后不取，即 end 下标位置的元素不取。负数则从后向前数，从-1开始</li>
+            <li>同时赋值多个变量是赋值运算是同步进行，并无先后顺序</li>
+            <li>变量赋值的过程仅仅是给创建好的数据添加标识符，而数据在内存当中是唯一的。</li>
+            <li>元组是不可变的，一旦创建就不能被修改。 定义只有一个元素的元组时，需要在元素后面加上逗号，如single_tuple = (1,)。</li>
+        </ul>
+        <!-- 可为字典操作易错点、元组的易错点、集合的易错点添加类似列表的ul元素 -->
+    </section>
+    <section id="python_builtins">
+        <h2>常用基础语法</h2>
+        <!-- 以下是内置函数的示例 -->
+        <p>以下是一些常用的基础语法：</p>
+        <ul>
+            <li>面向对象：每一个变量都是一个类，有其自己的属性（attribute）与方法（method）。</li>
+            <li>语法块：用缩进（四个空格）而不是分号、花括号等符号来标记。因此，行首的空格不能随意书写。</li>
+            <li> 注释：行内用“#”号，行间注释写在两组连续三单引号之间：’’’</li>
+            <li>续行：行尾输入一个反斜杠加一个空格（’\ ‘），再换行。如果行尾语法明显未完成（比如以逗号结尾），可以直接续行。</li>
+            <li>打印与输入： 函数 print() 与 input()，注意 print() 的 sep 与 end 参数。</li>
+            <li>模块：通过 import pandas 的方式加载模块（或者 import pandas as pd），并用形如 pandas.DataFrame（或 pd.DataFrame）的方式调用模块内的方法。也可以使用 from pandas import DataFrame 的方式，这样在下文可以直接使用 DataFrame 作为调用名</li>
+            <li>四则运算：+， -， ， / ，乘方： *</li>
+            <li>整除： 5 // 2 = 2，取余：5 % 2 = 1</li>
+            <li>自运算： a += 1 （四则与乘方均可类似自运算）</li>
+            <li>运算两数中只要有一个浮点数，结果就是浮点数</li>
+        </ul>
+    </section>
+</div>
+</body>
+</html>
